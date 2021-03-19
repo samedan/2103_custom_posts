@@ -111,7 +111,7 @@ https://searchandfilter.com/documentation/search-results/custom-layouts/
 Trustfolio
 
 https://api.trustfolio.co/v1/references
-"apiKey":"uko3U2PDnkOsntq11et7nVtCT1vsnBtA"
+"apiKey":""
 
 
 [searchandfilter id="3862" show="results"]
