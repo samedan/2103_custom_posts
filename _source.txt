@@ -1,0 +1,117 @@
+Source:
+https://www.youtube.com/watch?v=fFNXWinbgro
+
+Maybe following :
+https://www.youtube.com/watch?v=9KGuI0UmpMw
+
+Trustfolio:
+https://api.trustfolio.co/v1/references
+
+
+
+
+>> GEt :
+http://adelanto.articole-smart.eu/wp-json
+
+>> GET posts : 
+http://adelanto.articole-smart.eu/wp-json/wp/v2/posts
+
+>> GET user post : 
+http://adelanto.articole-smart.eu/wp-json/wp/v2/users/1
+
+>> POST for token
+http://adelanto.articole-smart.eu/wp-json/jwt-auth/v1/token
+"username":"",
+"password":""
+
+>> POST (with token)
+http://adelanto.articole-smart.eu/wp-json/wp/v2/posts
+> Headers
+"Content-Type":"application/json",
+"Authorization":"Bearer xxx",
+> Body
+"title":"",
+"content":"",
+"status":"publish",
+
+>> GET Custom Posts
+http://adelanto.articole-smart.eu/wp-json/wp/v2/temoignages
+
+>> GET a limit number
+http://adelanto.articole-smart.eu/wp-json/wp/v2/temoignages?per_page=1
+
+>> Get One 
+http://adelanto.articole-smart.eu/wp-json/wp/v2/temoignages/9
+
+>> Get media (images)
+http://adelanto.articole-smart.eu/wp-json/wp/v2/media/12
+
+>> DELETE (brouillon = draft)
+http://adelanto.articole-smart.eu/wp-json/wp/v2/temoignages
+
+>> POST 
+http://adelanto.articole-smart.eu/wp-json/wp/v2/temoignages
+{
+    "title": "T Four",
+    "content": "This is T 4",
+    "status":"publish",
+    "fields": {
+        "testimony": "T4",
+    "organization": "T4"
+    
+    }
+    
+}
+
+>> PUT 
+http://adelanto.articole-smart.eu/wp-json/wp/v2/temoignages/22
+{
+    "title": "T Four",
+    "content": "This is T 4",
+    "status":"publish",
+    "fields": {
+        "testimony": "T4",
+        "organization": "T4"
+    
+    }
+    
+}
+.........................................................
+>> PLUGINS
+# JWT Authentication for WP REST API
+
+.htaccess
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+wp-config.php
+define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
+define('JWT_AUTH_CORS_ENABLE', true);
+
+
+
+# Custom Post Type UI
+- Show in REST API
+- Slug
+
+# Advanced Custom Fields
+
+# ACF to REST API
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Display template
+https://www.designbombs.com/how-to-create-and-display-a-custom-post-type-on-wordpress/
+
+
+https://www.adelanto.fr/blog/2018/09/07/nouvelle-edition-di-info-septembre-2018/
+https://searchandfilter.com/documentation/search-results/custom-layouts/
+
+.........................................................
+Trustfolio
+
+https://api.trustfolio.co/v1/references
+"apiKey":"uko3U2PDnkOsntq11et7nVtCT1vsnBtA"
+
+
+[searchandfilter id="3862" show="results"]
